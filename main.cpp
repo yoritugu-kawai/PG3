@@ -11,7 +11,8 @@ T Min(T a, T b) {
 }
 template<>
 char Min<char>(char a, char b) {
-	return printf("数字以外は代入出来ません");
+	printf("数字以外は代入出来ません");
+	return 0;
 
 }
 
