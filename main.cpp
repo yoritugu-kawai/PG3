@@ -22,7 +22,7 @@ int main() {
 	//float型
 	printf("%.1f or %.1f = %.1f\n",4.2f,4.3f, Min<float>(4.2f, 4.3f));
 	//double型
-	printf("%.1lf or%.1lf = %.1lf\n",4.3f,4.1f, Min<double>(4.3f, 4.1f));
+	printf("%.1lf or %.1lf = %.1lf\n",4.3f,4.1f, Min<double>(4.3f, 4.1f));
 	//char型
 	printf("%c\n", Min<char>(1, 2));
 	return 0;
