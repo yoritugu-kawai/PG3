@@ -25,6 +25,6 @@ int main() {
 	//double型
 	printf("%.1lf or %.1lf = %.1lf\n",4.3f,4.1f, Min<double>(4.3f, 4.1f));
 	//char型
-　 Min<char>('a', 'b');
+     Min<char>('a', 'b');
 	return 0;
 }
