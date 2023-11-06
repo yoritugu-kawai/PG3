@@ -1,53 +1,29 @@
-#include <stdio.h>
-#include <windows.h>
-#include <stdlib.h>
-#include <functional>
-#include <random>
-typedef void (*Func)(int*);
+ï»¿#include"Game.h"
+#include"FeelsGood.h"
 
-//‚³‚¢‚±‚ëŠÖ”
-int GetDiceNumber() {
-	std::random_device rnd;
-	return rnd() % 6 + 1;
-}
-int main() {
+int main(void) 
+{
+	Combo* combo[2];
 
+	for (int i = 0; i < 2; i++)
+	{
+		combo[i] = new Combo();
+		combo[i]->play();
 
-	printf("’š‚È‚ç2‚ğ\n");
-	printf("”¼‚È‚ç1‚ğ\n");
-
-	int answer = 0;
-	scanf_s("%d", &answer);
-
-	std::function<void()> Taut = []() {
-		printf("‚³‚ ‚Í‚Á‚½‚Í‚Á‚½\n\n");
-		Sleep(3 * 1000);
-	};
-
-
-	Taut();
-
-
-	std::function<void(int)> Dinghan = [](int answer) {
-	
-
-		int rndNumber = GetDiceNumber();
-
-
-		printf("‚³‚¢‚±‚ë‚Ì’l‚Í%d‚¾‚æ\n", rndNumber);
-
-		if (rndNumber % 2 == 0 && answer % 2 == 0) {
-			printf("’š!!\n");
+		if (i == 0)
+		{
+			combo[i] = new Game();
+			combo[i]->play();
+			delete combo[i];
 		}
-		else if (rndNumber % 2 == 1 && answer % 2 == 1) {
-			printf("”¼!!\n");
-		}
-		else {
-			printf("I‚í‚è‚¾‚ÈEE\n");
-		}
-	};
 
-	Dinghan(answer);
+		if (i == 1)
+		{
+			combo[i] = new FeelsGood();
+			combo[i]->play();
+			delete combo[i];
+		}
+	}
 
 	return 0;
 }
