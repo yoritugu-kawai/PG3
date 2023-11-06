@@ -1,11 +1,11 @@
 ﻿#include<stdio.h>
 
-int Recursive(int m ,int n ) {
-	if (n == 1) {
-		return m;
+int Recursive(int money ,int time ) {
+	if (time == 1) {
+		return money;
 	}
-	if (n > 1) {
-		return m+ Recursive(m * 2 - 50,n-1);
+	if (time > 1) {
+		return money+ Recursive(money * 2 - 50,time-1);
 	}
 
 }
