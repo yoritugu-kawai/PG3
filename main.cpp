@@ -1,11 +1,11 @@
 ﻿#include<stdio.h>
 
-int Recursive(int money ,int time ) {
+int Loophole(int money ,int time ) {
 	if (time == 1) {
 		return money;
 	}
 	if (time > 1) {
-		return money+ Recursive(money * 2 - 50,time-1);
+		return money+ Loophole(money * 2 - 50,time-1);
 	}
 
 }
@@ -23,7 +23,7 @@ int main() {
 		normalSalary = salary * hoursWorked;
 
 		//再帰
-		recursionSalary = Recursive(100, hoursWorked);
+		recursionSalary = Loophole(100, hoursWorked);
 
 		printf("%d時間", i);
 		printf("通常だと%d円\n", normalSalary);
