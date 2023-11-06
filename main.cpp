@@ -17,10 +17,10 @@ void Dinghan(int* answer) {
 	printf("‚³‚¢‚±‚ë‚Ì’l‚Í%d‚¾‚æ\n", rndNum);
 
 	if (rndNum % 2 == 0 && *answer % 2 == 0) {
-		printf("³‰ğ!\n");
+		printf("’š!\n");
 	}
 	else if (rndNum % 2 == 1 && *answer % 2 == 1) {
-		printf("³‰ğ!!\n");
+		printf("”¼!!\n");
 	}
 	else {
 		printf("‚¢‚½‚¾‚«‚â‚·EE\n");
@@ -49,10 +49,10 @@ int main() {
 	scanf_s("%d", &answer);
 
 
-	Func wait;
-	wait = Dinghan;
+	Func Okay;
+	Okay = Dinghan;
 	//“š‚¦‚ªGetDiceNumber
-	Taut(wait, answer);
+	Taut(Okay, answer);
 
 
 
