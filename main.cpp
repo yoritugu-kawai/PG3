@@ -1,29 +1,23 @@
-﻿#include"Game.h"
-#include"FeelsGood.h"
+﻿#include<stdio.h>
+#include"math/Rectangle.h"
+#include"math/Circle.h"
 
-int main(void) 
+int main()
 {
-	Combo* combo[2];
+	Ishape* rectangle_ = new Rectangle();
 
-	for (int i = 0; i < 2; i++)
-	{
-		combo[i] = new Combo();
-		combo[i]->play();
+	rectangle_->SetSize({ 10.0f,10.0f });
+	rectangle_->Size();
+	rectangle_->Draw();
 
-		if (i == 0)
-		{
-			combo[i] = new Game();
-			combo[i]->play();
-			delete combo[i];
-		}
-
-		if (i == 1)
-		{
-			combo[i] = new FeelsGood();
-			combo[i]->play();
-			delete combo[i];
-		}
-	}
+    Ishape* circle_ = new Circle();
+    
+    circle_->SetSize({ 10.0f,10.0f });
+    circle_->Size();
+    circle_->Draw();
+    
+    delete rectangle_;
+    delete circle_;
 
 	return 0;
 }
