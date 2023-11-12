@@ -1,5 +1,8 @@
 ﻿#pragma once
-#include"../math/Vec2.h"
+struct Vec2
+{
+	float x, y;
+};
 
 class Ishape
 {
@@ -7,18 +10,18 @@ public:
 	Ishape() {};
 	virtual ~Ishape() {};
 
-	virtual void Size() = 0;
+	virtual void Siz() = 0;
 	virtual void Draw() = 0;
 	
-	void SetSize(Vec2 size) { size_ = size; }
+	void SetSiz(Vec2 siz) { siz_ = siz; }
 	void SetArea(float area) { area_ = area; }
 
-	Vec2 GetSize() { return size_; }
+	Vec2 GetSiz() { return siz_; }
 	float GetArea() { return area_; }
 
 private:
 
-	Vec2 size_ = {};
+	Vec2 siz_ = {};
 	float area_ = {};
 };
 

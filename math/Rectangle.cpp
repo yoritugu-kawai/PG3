@@ -1,14 +1,14 @@
 ﻿#include "Rectangle.h"
 
-void Rectangle::Size()
+void Rectangle::Siz()
 {
-	float result = GetSize().x* GetSize().y;
+	float result = GetSiz().x* GetSiz().y;
 	SetArea(result);
 }
 
 void Rectangle::Draw()
 {
-	printf("横=%0.3f\n", GetSize().x);
-	printf("縦=%0.3f\n", GetSize().y);
+	printf("横=%0.3f\n", GetSiz().x);
+	printf("縦=%0.3f\n", GetSiz().y);
 	printf("面積=%0.3f\n",GetArea());
 }

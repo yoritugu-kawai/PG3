@@ -6,14 +6,14 @@ int main()
 {
 	Ishape* rectangle_ = new Rectangle();
 
-	rectangle_->SetSize({ 10.0f,10.0f });
-	rectangle_->Size();
+	rectangle_->SetSiz({ 10.0f,10.0f });
+	rectangle_->Siz();
 	rectangle_->Draw();
 
     Ishape* circle_ = new Circle();
     
-    circle_->SetSize({ 10.0f,10.0f });
-    circle_->Size();
+    circle_->SetSiz({ 10.0f,10.0f });
+    circle_->Siz();
     circle_->Draw();
     
     delete rectangle_;
