@@ -14,7 +14,7 @@ void (Enemy::* Enemy::sPhaseTable_[])()
 	&Enemy::Leave
 };
 
-void Enemy::Init()
+void Enemy::Initialize()
 {
 	printf("初期化\n");
 	phase_ = Phase::Approach;

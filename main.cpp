@@ -5,7 +5,7 @@
 int main()
 {
 	Enemy* enemy = new Enemy();
-	enemy->Init();
+	enemy->Initialize();
 
 	bool isGame = true;
 

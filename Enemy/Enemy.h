@@ -8,7 +8,7 @@ public:
 	Enemy();
 	~Enemy();
 
-	void Init();
+	void Initialize();
 
 	void Update();
 
