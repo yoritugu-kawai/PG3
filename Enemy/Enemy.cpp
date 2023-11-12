@@ -27,7 +27,7 @@ void Enemy::Update()
 
 void Enemy::Approach()
 {
-	printf("EnemyPhase  Approch\n 切り替わりまで : %d\n",PhaseTimer_);
+	printf("切り替わりまで残り%d\n",PhaseTimer_);
 	Sleep(1 * 1000);
 
 	PhaseTimer_--;
@@ -40,7 +40,7 @@ void Enemy::Approach()
 
 void Enemy::Leave()
 {
-	printf("EnemyPhase  Leave\n 終了まで : %d\n",PhaseTimer_);
+	printf("終了まで残り%d\n",PhaseTimer_);
 	Sleep(1 * 1000);
 	
 	PhaseTimer_--;
