@@ -1,11 +1,11 @@
 #pragma once
 
 template<typename T1,typename T2>
-class NumberCompare
+class Number
 {
 public:
-	NumberCompare() {};
-	~NumberCompare() {};
+	Number() {};
+	~Number() {};
 
 	void SetNumber(T1 n1,T2 n2)
 	{
