@@ -7,13 +7,13 @@ int main()
 	Enemy* enemy = new Enemy();
 	enemy->Init();
 
-	bool isGameLoop = true;
+	bool isGame = true;
 
-	while (isGameLoop)
+	while (isGame)
 	{
 		enemy->Update();
 
-		isGameLoop = enemy->GetIsGameLoop();
+		isGame = enemy->GetIsGameLoop();
 	}
 	printf("終了\n");
 	delete enemy;
