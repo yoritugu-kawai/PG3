@@ -1,11 +1,11 @@
-﻿#include "FeelsGood.h"
+﻿#include "Character.h"
 
-FeelsGood::~FeelsGood()
+Character::~Character()
 {
 	printf("テ〇ーダのコンボ気持ち良すぎだろ");
 }
 
-void FeelsGood::play()
+void Character::play()
 {
 	printf("ティー〇つかお\n");
 }

@@ -1,5 +1,5 @@
 ﻿#include"Game.h"
-#include"FeelsGood.h"
+#include"Character.h"
 
 int main(void) 
 {
@@ -19,7 +19,7 @@ int main(void)
 
 		if (i == 1)
 		{
-			combo[i] = new FeelsGood();
+			combo[i] = new Character();
 			combo[i]->play();
 			delete combo[i];
 		}

@@ -1,11 +1,11 @@
 ﻿#pragma once
 #include"Combo.h"
 
-class FeelsGood : public Combo
+class Character : public Combo
 {
 public:
-	FeelsGood() {};
-	~FeelsGood();
+	Character() {};
+	~Character();
 
 	void play()override;
 private:
