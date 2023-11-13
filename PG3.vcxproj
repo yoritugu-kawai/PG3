@@ -130,13 +130,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="math\Circle.cpp" />
-    <ClCompile Include="math\Rectangle.cpp" />
+    <ClCompile Include="Shape\Circle.cpp" />
+    <ClCompile Include="Shape\Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="math\Circle.h" />
-    <ClInclude Include="math\Ishape.h" />
-    <ClInclude Include="math\Rectangle.h" />
+    <ClInclude Include="Shape\Circle.h" />
+    <ClInclude Include="Shape\IShape.h" />
+    <ClInclude Include="Shape\Rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

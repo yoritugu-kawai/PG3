@@ -4,11 +4,11 @@ struct Vec2
 	float x, y;
 };
 
-class Ishape
+class IShape
 {
 public:
-	Ishape() {};
-	virtual ~Ishape() {};
+	IShape() {};
+	virtual ~IShape() {};
 
 	virtual void Siz() = 0;
 	virtual void Draw() = 0;
