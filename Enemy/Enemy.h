@@ -12,25 +12,26 @@ public:
 
 	void Update();
 
-	bool GetGameLoop() { return GameLoop_; }
+	bool GetGameLoop() { return isGameLoop_; }
 
 private:
 
 	void Approach();
+	void Attack();
 	void Leave();
 
 	enum class Phase {
-	     Aprroach,
-	     Leave
+		Approach,
+		Attack,
+		Leave,
 	};
-	
+
 	Phase phase_{};
 
-	//メンバ関数ポインタテーブル
 	static void (Enemy::* sPhaseTable_[])();
 
 	const int PhaseTimerMax_ = 5;
 	int PhaseTimer_ = PhaseTimerMax_;
 
-	bool GameLoop_ = true;
+	bool isGameLoop_ = true;
 };
