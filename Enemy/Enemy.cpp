@@ -17,7 +17,7 @@ void (Enemy::* Enemy::sPhaseTable_[])()
 void Enemy::Initialize()
 {
 	printf("初期化\n");
-	phase_ = Phase::Approach;
+	phase_ = Phase::Aprroach;
 }
 
 void Enemy::Update()
@@ -46,7 +46,7 @@ void Enemy::Leave()
 	PhaseTimer_--;
 	if (PhaseTimer_<=0)
 	{
-		isGameLoop_ = false;
+		GameLoop_ = false;
 	}
 }
 

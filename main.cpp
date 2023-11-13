@@ -13,7 +13,7 @@ int main()
 	{
 		enemy->Update();
 
-		isGame = enemy->GetIsGameLoop();
+		isGame = enemy->GetGameLoop();
 	}
 	printf("終了\n");
 	delete enemy;

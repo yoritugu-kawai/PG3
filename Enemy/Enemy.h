@@ -12,7 +12,7 @@ public:
 
 	void Update();
 
-	bool GetIsGameLoop() { return isGameLoop_; }
+	bool GetGameLoop() { return GameLoop_; }
 
 private:
 
@@ -20,7 +20,7 @@ private:
 	void Leave();
 
 	enum class Phase {
-	     Approach,
+	     Aprroach,
 	     Leave
 	};
 	
@@ -32,5 +32,5 @@ private:
 	const int PhaseTimerMax_ = 5;
 	int PhaseTimer_ = PhaseTimerMax_;
 
-	bool isGameLoop_ = true;
+	bool GameLoop_ = true;
 };
