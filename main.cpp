@@ -35,7 +35,7 @@ std::function<void(int)> Dinghan = [=](int answer) {
 	}
 };
 int main() {
-	//SetConsoleOutputCP(65001);
+	SetConsoleOutputCP(65001);
 
 	printf("丁なら2を\n");
 	printf("半なら1を\n");
