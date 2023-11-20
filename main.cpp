@@ -5,22 +5,22 @@
 #include <random>
 typedef void (*Func)(int*);
 
-//‚³‚¢‚±‚ëŠÖ”
+//ã•ã„ã“ã‚é–¢æ•°
 int GetDiceNumber() {
 	std::random_device rnd;
 	return rnd() % 6 + 1;
 }
 int main() {
+	SetConsoleOutputCP(65001);
 
-
-	printf("’š‚È‚ç2‚ğ\n");
-	printf("”¼‚È‚ç1‚ğ\n");
+	printf("ä¸ãªã‚‰2ã‚’\n");
+	printf("åŠãªã‚‰1ã‚’\n");
 
 	int answer = 0;
 	scanf_s("%d", &answer);
 
 	std::function<void()> Taut = []() {
-		printf("‚³‚ ‚Í‚Á‚½‚Í‚Á‚½\n\n");
+		printf("ã•ã‚ã¯ã£ãŸã¯ã£ãŸ\n\n");
 		Sleep(3 * 1000);
 	};
 
@@ -34,16 +34,16 @@ int main() {
 		int rndNumber = GetDiceNumber();
 
 
-		printf("‚³‚¢‚±‚ë‚Ì’l‚Í%d‚¾‚æ\n", rndNumber);
+		printf("ã•ã„ã“ã‚ã®å€¤ã¯%dã ã‚ˆ\n", rndNumber);
 
 		if (rndNumber % 2 == 0 && answer % 2 == 0) {
-			printf("’š!!\n");
+			printf("ä¸!!\n");
 		}
 		else if (rndNumber % 2 == 1 && answer % 2 == 1) {
-			printf("”¼!!\n");
+			printf("åŠ!!\n");
 		}
 		else {
-			printf("I‚í‚è‚¾‚ÈEE\n");
+			printf("çµ‚ã‚ã‚Šã ãªãƒ»ãƒ»\n");
 		}
 	};
 
