@@ -11,6 +11,11 @@ int GetDiceNumber() {
 	std::random_device rnd;
 	return rnd() % 6 + 1;
 }
+std::function<void()> SetTimeout = []() {
+	printf("さあはったはった\n\n");
+	Sleep(3 * 1000);
+};
+
 int main() {
 	SetConsoleOutputCP(65001);
 
@@ -20,13 +25,9 @@ int main() {
 	int answer = 0;
 	scanf_s("%d", &answer);
 
-	std::function<void()> Taut = []() {
-		printf("さあはったはった\n\n");
-		Sleep(3 * 1000);
-	};
 
 
-	Taut();
+	SetTimeout();
 
 
 	std::function<void(int)> Dinghan = [](int answer) {
