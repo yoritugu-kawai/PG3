@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <functional>
 #include <random>
+#include<iostream>
 typedef void (*Func)(int*);
 
 //さいころ関数
