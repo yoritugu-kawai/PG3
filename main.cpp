@@ -6,7 +6,7 @@
 
 int main() {
 
-	std::vector<std::string> mailAdress{
+	std::vector<std::string> studentNumber{
 		"k022g0108@g.neec.ac.jp","k022g0045@g.neec.ac.jp","k022g0007@g.neec.ac.jp","k022g0015@g.neec.ac.jp","k022g0028@g.neec.ac.jp",
 		"k022g0049@g.neec.ac.jp","k022g0003@g.neec.ac.jp","k022g0044@g.neec.ac.jp","k022g0072@g.neec.ac.jp","k022g0055@g.neec.ac.jp",
 		"k021g1139@g.neec.ac.jp","k021g1485@g.neec.ac.jp","k021g1162@g.neec.ac.jp","k021g1278@g.neec.ac.jp","k020g1229@g.neec.ac.jp",
@@ -35,10 +35,10 @@ int main() {
 
 
 	std::cout << "順番" << "\n\n";
-	std::sort(mailAdress.begin(), mailAdress.end());
+	std::sort(studentNumber.begin(), studentNumber.end());
 
-	for (int i = 0; i < mailAdress.size(); i++) {
-		std::cout << mailAdress[i] << "\n";
+	for (int i = 0; i < studentNumber.size(); i++) {
+		std::cout << studentNumber[i] << "\n";
 	}
 
 
