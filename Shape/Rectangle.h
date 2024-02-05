@@ -8,7 +8,7 @@ public:
 	Rectangle() {};
 	~Rectangle() {};
 
-	void Siz()override;
+	void Size()override;
 
 	void Draw()override;
 private:

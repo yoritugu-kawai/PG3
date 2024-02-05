@@ -9,7 +9,7 @@ public:
 	Circle() {};
 	~Circle() {};
 
-	void Siz()override;
+	void Size()override;
 
 	void Draw()override;
 

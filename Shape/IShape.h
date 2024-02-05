@@ -10,13 +10,13 @@ public:
 	IShape() {};
 	virtual ~IShape() {};
 
-	virtual void Siz() = 0;
+	virtual void Size() = 0;
 	virtual void Draw() = 0;
 	
-	void SetSiz(Vec2 siz) { siz_ = siz; }
+	void SetSize(Vec2 siz) { siz_ = siz; }
 	void SetArea(float area) { area_ = area; }
 
-	Vec2 GetSiz() { return siz_; }
+	Vec2 GetSize() { return siz_; }
 	float GetArea() { return area_; }
 
 private:
