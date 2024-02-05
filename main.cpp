@@ -32,15 +32,15 @@ int main() {
 	std::vector<std::string> threadName{ "thread 1","thread 2","thread 3" };
 
 	//1つ目
-	std::thread th1(DisplayText, threadName[0]);
-	th1.join();
+	std::thread thread1(DisplayText, threadName[0]);
+	thread1.join();
 
 	//2つ目
-	std::thread th2(DisplayText, threadName[1]);
-	th2.join();
+	std::thread thread2(DisplayText, threadName[1]);
+	thread2.join();
 
 	//3つ目
-	std::thread th3(DisplayText, threadName[2]);
-	th3.join();
+	std::thread thread3(DisplayText, threadName[2]);
+	thread3.join();
 	return 0;
 }
