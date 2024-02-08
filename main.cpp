@@ -1,46 +1,32 @@
 #include <stdio.h>
 #include <string>
+#include <chrono>
 #include <iostream>
-#include <vector>
-#include <thread>
-
-
-void DisplayText(std::string name) {
-	std::cout << name << std::endl;
-}
-
-int Add(int a, int b) {
-	int result = a + b;
-	std::cout << result << "\n";
-	return result;
-}
-
-int Subtract(int a, int b) {
-	return a - b;
-}
-
-int Multiply(int a, int b) {
-	return a * b;
-}
-
-int Division(int a, int b) {
-	return a / b;
-}
-
 
 int main() {
-	std::vector<std::string> threadName{ "thread 1","thread 2","thread 3" };
 
-	//1つ目
-	std::thread thread1(DisplayText, threadName[0]);
-	thread1.join();
+	int i = 1;
+	const int text_ = 100000;
+	std::string a(text_, 'a');
+	std::cout << text_ << "文字コピーと移動を比較\n";
 
-	//2つ目
-	std::thread thread2(DisplayText, threadName[1]);
-	thread2.join();
+	std::chrono::steady_clock::time_point start_ = std::chrono::steady_clock::now();
+	std::string a2 = a;
+	std::chrono::steady_clock::time_point end_ = std::chrono::steady_clock::now();
 
-	//3つ目
-	std::thread thread3(DisplayText, threadName[2]);
-	thread3.join();
+	auto result_ = std::chrono::duration_cast<std::chrono::microseconds>(end_ - start_).count();
+
+	std::cout << "コピー" << "\n";
+	std::cout << result_ << "\n";
+	std::chrono::steady_clock::time_point start2_ = std::chrono::steady_clock::now();
+	std::string a3 = std::move(a);
+	std::chrono::steady_clock::time_point end2_ = std::chrono::steady_clock::now();
+
+	auto result2_ = std::chrono::duration_cast<std::chrono::microseconds>(end2_ - start2_).count();
+
+	std::cout << "移動" << "\n";
+	std::cout << result2_ << " \n";
+
+
 	return 0;
 }
