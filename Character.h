@@ -1,13 +1,7 @@
 ﻿#pragma once
-#include"Combo.h"
-
-class Character : public Combo
-{
+#include"Game.h"
+class Character : public Game {
 public:
-	Character() {};
-	~Character();
-
-	void play()override;
-private:
-
+	Character(const char* name);
+	void Play() override;
 };

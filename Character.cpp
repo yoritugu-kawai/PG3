@@ -1,11 +1,9 @@
 ﻿#include "Character.h"
 
-Character::~Character()
-{
-	printf("テ〇ーダのコンボ気持ち良すぎだろ");
+Character::Character(const char* name) {
+	name_ = name;
 }
 
-void Character::play()
-{
-	printf("ティー〇つかお\n");
+void Character::Play() {
+	cout << name_ << endl;
 }

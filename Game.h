@@ -1,14 +1,13 @@
 ﻿#pragma once
-#include"Combo.h"
 
-class Game : public Combo
-{
+
+#include <iostream>
+using namespace std;
+
+class Game {
 public:
-	Game() {};
-	~Game();
+	virtual void Play();
 
-	void play()override;
-
-private:
-
+protected:
+	const char* name_;
 };

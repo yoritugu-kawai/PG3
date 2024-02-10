@@ -1,28 +1,19 @@
-﻿#include"Game.h"
+﻿#include"Operation.h"
 #include"Character.h"
 
-int main(void) 
-{
-	Combo* combo[2];
+int main(void) {
+	const size_t kCount = 2;
+	Game* game[kCount];
 
-	for (int i = 0; i < 2; i++)
-	{
-		combo[i] = new Combo();
-		combo[i]->play();
+	game[0] = new Operation("コンボしたい");
+	game[1] = new Character("コンボ気持ち良すぎ");
 
-		if (i == 0)
-		{
-			combo[i] = new Game();
-			combo[i]->play();
-			delete combo[i];
-		}
+	for (size_t i = 0; i < kCount; i++) {
+		game[i]->Play();
+	}
 
-		if (i == 1)
-		{
-			combo[i] = new Character();
-			combo[i]->play();
-			delete combo[i];
-		}
+	for (size_t i = 0; i < kCount; i++) {
+		delete game[i];
 	}
 
 	return 0;
