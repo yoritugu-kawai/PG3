@@ -2,22 +2,22 @@
 #include"Shape/Rectangle.h"
 #include"Shape/Circle.h"
 
-int main()
-{
-	IShape* rectangle_ = new Rectangle();
 
-	rectangle_->SetSize({ 10.0f,10.0f });
-	rectangle_->Size();
-	rectangle_->Draw();
+int main(void) {
+	const size_t kShape = 2;
+	IShape* shape[kShape];
 
-    IShape* circle_ = new Circle();
-    
-    circle_->SetSize({ 10.0f,10.0f });
-    circle_->Size();
-    circle_->Draw();
-    
-    delete rectangle_;
-    delete circle_;
+	shape[0] = new Circle(8.0f);
+	shape[1] = new Rectangle(4.0f, 11.0f);
+
+	for (size_t i = 0; i < kShape; i++) {
+		shape[i]->Size();
+		shape[i]->Draw();
+	}
+
+	for (size_t i = 0; i < kShape; i++) {
+		delete shape[i];
+	}
 
 	return 0;
 }

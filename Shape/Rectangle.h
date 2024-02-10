@@ -2,16 +2,15 @@
 #include"IShape.h"
 #include<stdio.h>
 
-class Rectangle : public IShape
-{
+class Rectangle : public IShape {
 public:
-	Rectangle() {};
-	~Rectangle() {};
+	Rectangle(float width, float height) { width_ = width, height_ = height; }
 
-	void Size()override;
+	void Size() override;
+	void Draw() override;
 
-	void Draw()override;
 private:
-
+	float size_;
+	float width_;
+	float height_;
 };
-
