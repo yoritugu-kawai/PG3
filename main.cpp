@@ -4,47 +4,50 @@
 #include <functional>
 #include <random>
 #include<iostream>
-typedef void (*Func)(int*);
 
-//さいころ関数
-int GetDiceNumber() {
-	std::random_device rnd;
-	return rnd() % 6 + 1;
+void SetTimeOut(std::function<void()> function, int second) {
+	Sleep(second * 1000);
+	function();
 }
-void SetTimeout (int timeout) {
-	printf("さあはったはった\n\n");
-	Sleep(3 * 1000);
-};
 
-std::function<void(int)> Dinghan = [=](int answer) {
+int PlayerChallenge() {
+	int playerChallenge = 0;
 
-
-	int rndNumber = GetDiceNumber();
-
-
-	printf("さいころの目は%dだ\n", rndNumber);
-
-	if (rndNumber % 2 == 0 && answer % 2 == 0) {
-		printf("丁!!\n");
+	while (playerChallenge != 1 && playerChallenge != 2) {
+		std::cout << "奇数か偶数か選択しEnterを押せ!!" << std::endl;
+		std::cout << "1 : 奇数, 2 : 偶数" << std::endl;
+		std::cin >> playerChallenge;
 	}
-	else if (rndNumber % 2 == 1 && answer % 2 == 1) {
-		printf("半!!\n");
-	}
-	else {
-		printf("終わりだな・・\n");
-	}
-};
-int main() {
-	
+	return playerChallenge;
+}
 
-	printf("丁なら2を\n");
-	printf("半なら1を\n");
-	int answer = 0;
-	int resultTime = 3;
-	scanf_s("%d", &answer);
-	SetTimeout(resultTime);
+int main(void) {
+	std::random_device rd;
+	std::mt19937 mt(rd());
 
-	Dinghan(answer);
+	int playerChallenge = PlayerChallenge();
+
+	std::function<int()> diceRotation = [&mt]() {
+		return mt() % 6 + 1;
+	};
+
+	int diceResult = diceRotation();
+
+	std::function<void()> result = [&]() {
+		std::cout << "さいころの出目は " << diceResult;
+		std::cout << " で";
+		std::cout << (diceResult % 2 == 0 ? "偶数" : "奇数");
+		std::cout << " だ" << std::endl;
+
+		if ((diceResult % 2 == 0 && playerChallenge == 2) || (diceResult % 2 == 1 && playerChallenge == 1)) {
+			std::cout << "当たりや" << std::endl;
+		}
+		else {
+			std::cout << "はずれや" << std::endl;
+		}
+	};
+
+	SetTimeOut(result, 3);
 
 	return 0;
 }
