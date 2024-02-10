@@ -1,6 +1,9 @@
-﻿#include "Combo.h"
+﻿#include "Operation.h"
 
-void Combo::play()
-{
-	printf("コンボしたいな\n");
+Operation::Operation(const char* name) {
+	name_ = name;
+}
+
+void Operation::Play() {
+	cout << name_ << endl;
 }

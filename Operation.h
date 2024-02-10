@@ -1,15 +1,8 @@
 ﻿#pragma once
-#include<stdio.h>
+#include"Game.h"
 
-class Combo
-{
+class Operation : public Game {
 public:
-	Combo() {};
-	virtual ~Combo() {};
-
-	virtual void play();
-
-private:
-
+	Operation(const char* name);
+	void Play() override;
 };
-
