@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<random>
 #include<Windows.h>
 #include<functional>
@@ -21,14 +21,14 @@ void SetTimeOut(pFunction function, int second, int diceRolling, int player) {
 }
 
 void Result(int diceRolling, int player) {
-	cout << "ƒTƒCƒRƒ‚Ìo–Ú‚Í" << diceRolling << "‚Å";
-	cout << (diceRolling % 2 == 0 ? "‹ô”" : "Šï”") << "‚¾" << endl;
+	cout << "ã‚µã‚¤ã‚³ãƒ­ã®å‡ºç›®ã¯" << diceRolling << "ã§";
+	cout << (diceRolling % 2 == 0 ? "å¶æ•°" : "å¥‡æ•°") << "ã " << endl;
 
 	if ((diceRolling % 2 == 0 && player == 2) || (diceRolling % 2 == 1 && player == 1)) {
-		cout << "“–‚½‚è" << endl;
+		cout << "å½“ãŸã‚Š" << endl;
 	}
 	else {
-		cout << "ŠO‚ê" << endl;
+		cout << "å¤–ã‚Œ" << endl;
 	}
 }
 
@@ -36,8 +36,8 @@ int PlayerChallenge() {
 	int player = 0;
 
 	while (player != 1 && player != 2) {
-		cout << "Šï”‚©‹ô”‚ð‘I‘ð‚µ‚ÄEnter‚ð‰Ÿ‚¹!!" << std::endl;
-		cout << "1 : Šï”, 2 : ‹ô”" << endl;
+		cout << "å¥‡æ•°ã‹å¶æ•°ã‚’é¸æŠžã—ã¦Enterã‚’æŠ¼ã›!!" << std::endl;
+		cout << "1 : å¥‡æ•°, 2 : å¶æ•°" << endl;
 		cin >> player;
 	}
 
