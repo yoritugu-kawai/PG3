@@ -1,12 +1,12 @@
-﻿#include"Operation.h"
-#include"Character.h"
+﻿#include"Shooting.h"
+#include"Action.h"
 
 int main(void) {
 	const size_t kCount = 2;
 	Game* game[kCount];
 
-	game[0] = new Operation("コンボしたい");
-	game[1] = new Character("コンボ気持ち良すぎ");
+	game[0] = new Shooting("シューティングゲーム");
+	game[1] = new Action("アクションゲーム");
 
 	for (size_t i = 0; i < kCount; i++) {
 		game[i]->Play();

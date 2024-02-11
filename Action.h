@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include"Game.h"
-class Character : public Game {
+class Action : public Game {
 public:
-	Character(const char* name);
+	Action(const char* name);
 	void Play() override;
 };
